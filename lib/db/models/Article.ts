@@ -37,8 +37,8 @@ const articleSchema = new Schema<IArticle>({
   timestamps: true
 });
 
+// Note: slug index is already created by unique: true
 articleSchema.index({ published: 1, publishedAt: -1 });
-articleSchema.index({ slug: 1 });
 articleSchema.index({ author: 1 });
 
 const Article: Model<IArticle> = mongoose.models.Article || mongoose.model<IArticle>('Article', articleSchema);

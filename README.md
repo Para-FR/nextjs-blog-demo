@@ -5,10 +5,13 @@
 
 ## 📊 Project Stats
 
-- **Time to MVP Foundation**: ~30 minutes
-- **Lines of Code**: ~1,500
+- **Time to Complete App**: ~30 minutes (with Claude Code `/wd:workflow`)
+- **Lines of Code**: ~2,500+
 - **TypeScript Strict Mode**: ✅ Zero errors
-- **Production Ready**: Database + Auth + UI components
+- **Production Ready**: Full CRUD + Auth + Comments + Likes
+- **Pages**: 6 (Home, Login, Register, Articles List, Article Detail, New Article, Edit Article)
+- **API Routes**: 7 (Auth, Register, Articles CRUD, Like, Comments)
+- **Components**: 10+ (UI + Feature components)
 
 ## 🎯 What This Demonstrates
 
@@ -161,7 +164,29 @@ openssl rand -base64 32
 - [x] Login with credentials
 - [x] Password hashing (bcryptjs)
 - [x] Session management (JWT)
-- [x] Protected routes (ready)
+- [x] Protected routes
+
+### Articles (Complete CRUD)
+- [x] Article listing page with pagination
+- [x] Article detail page with author info
+- [x] Create article page (`/articles/new`)
+- [x] Edit article page (author-only)
+- [x] Delete article (author-only)
+- [x] Draft/Publish toggle
+- [x] Auto-generated slugs from titles
+- [x] Excerpt support for listings
+
+### Like System
+- [x] Toggle like on articles (authenticated)
+- [x] Like count display
+- [x] Optimistic UI updates
+- [x] API endpoint `/api/articles/[id]/like`
+
+### Comments System
+- [x] Post comments on articles (authenticated)
+- [x] Comment list with author info
+- [x] Comment API endpoints (GET/POST)
+- [x] Author and timestamp display
 
 ### Database Models
 - [x] User model with indexes
@@ -176,33 +201,42 @@ openssl rand -base64 32
 - [x] Card layouts
 - [x] Error handling UI
 
-## 🎯 Next Steps (Not Implemented Yet)
+## 🎯 Next Steps (Enhancement Ideas)
 
-### Articles Feature
-- [ ] Article listing page
-- [ ] Article detail page
-- [ ] Create/edit article pages
-- [ ] Article API routes (CRUD)
-- [ ] Slug generation and validation
+### Content Features
+- [ ] Markdown editor (react-markdown or MDX)
+- [ ] Image upload (Cloudinary/S3)
+- [ ] Tags and categories
+- [ ] Full-text search (MongoDB text indexes)
+- [ ] Article bookmarks/favorites
 
-### Comments System
-- [ ] Comment list component
-- [ ] Comment form
-- [ ] Comment API routes
-- [ ] Real-time updates (optional)
+### Comment Enhancements
+- [ ] Comment replies/threading
+- [ ] Comment edit/delete
+- [ ] Comment reactions
+- [ ] Real-time updates (WebSockets/Pusher)
 
-### Like System
-- [ ] Like button component
-- [ ] Optimistic updates
-- [ ] Like API endpoint
-- [ ] Like count display
+### User Features
+- [ ] User profile pages
+- [ ] User avatars upload
+- [ ] Follow system
+- [ ] Activity feed
+- [ ] Email notifications (Resend)
 
-### Polish
-- [ ] Loading states
+### SEO & Performance
+- [ ] Open Graph metadata
+- [ ] JSON-LD structured data
+- [ ] RSS feed
+- [ ] Sitemap generation
+- [ ] Image optimization
+
+### Polish & UX
+- [ ] Loading skeletons
 - [ ] Error boundaries
 - [ ] Toast notifications
 - [ ] Empty states
-- [ ] Pagination
+- [ ] Infinite scroll pagination
+- [ ] Dark mode toggle
 
 ## 🧪 Testing Commands
 
